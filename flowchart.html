@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mermaidフローチャートジェネレーター</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <style>
+    .container {
+      display: flex;
+    }
+
+    .sample {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Mermaidフローチャート生成ツール</h1>
+  <div class="container">
+    <div>
+      <form id="chart-form">
+        <label for="chart-code">Mermaidコードを入力:</label>
+        <textarea id="chart-code" rows="10" cols="50">
+graph TD
+A[開始] --&gt;B{条件}
+B --&gt|はい| C[処理1]
+B --&gt|いいえ| D[処理2]
+C --&gt E[終了]
+D --&gt E
+        </textarea>
+        <button type="button" onclick="updateChart()">フローチャートを生成</button>
+      </form>
+
+      <div id="mermaid-chart"></div>
+    </div>
+
+    <div class="sample">
+      <h2>コピペ用サンプル</h2>
+      <pre>
+        長方形: A[テキスト] 
+        ひし形: A{条件} 
+        楕円: A((テキスト))
+        矢印: A --&gt B 
+        条件付き矢印: A --&gt|条件| B
+      </pre>
+    </div>
+  </div>
+
+  <script>
+    mermaid.initialize({ startOnLoad: true });
+
+    function updateChart() {
+      const chartCode = document.getElementById("chart-code").value;
+      const element = document.querySelector("#mermaid-chart");
+      try {
+        mermaid.parse(chartCode); // Mermaidコードが正しいか確認
+        element.innerHTML = chartCode.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        mermaid.init(undefined, element);
+      } catch (e) {
+        alert('Mermaidコードが正しくありません: ' + e.str);
+      }
+    }
+  </script>
+</body>
+
+</html>
