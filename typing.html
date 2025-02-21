@@ -45,7 +45,9 @@
       font-size: 16px;
     }
 
-    #major,#minor,#sub{
+    #major,
+    #minor,
+    #sub {
       font-size: 20px;
       padding: 5px;
     }
@@ -62,7 +64,7 @@
   <select id="sub"></select><br>
   <button onclick="filterSentences()">表示</button>
   <button onclick="randomSentence()">ランダム</button>
-
+  <button id="speak-btn">音読</button>
 
   <script>
     'use strict';
@@ -1168,7 +1170,7 @@
         "text": "情を知って上記1.、2.の行為につき納税者又はその財産を占有する第三者の相手方となったときは、その相手方としてその違反行為をした者は、２年以下の懲役若しくは１５０万円以下の罰金に処し、又はこれを併科する。",
         "category": { "major": "8-4刑罰", "minor": "4.固定資産税に係る滞納処分に関する罪", "sub": "3" }
       },]
-      let currentWord = "";
+    let currentWord = "";
     let startTime = null;
     let timer;
 
@@ -1196,7 +1198,14 @@
       const minor = document.getElementById("minor").value;
       const sub = document.getElementById("sub").value;
       const filtered = sentences.find(s => s.category.major === major && s.category.minor === minor && s.category.sub === sub);
-      
+
+      document.getElementById("speak-btn").addEventListener("click", () => {
+        const utterance = new SpeechSynthesisUtterance(sentences[currentSentenceIndex].text);
+        utterance.lang = 'ja-JP'; // 日本語の発音を設定
+        speechSynthesis.speak(utterance);
+      });
+
+
       if (filtered) {
         currentWord = filtered.text;
         displayWord("");
@@ -1248,7 +1257,7 @@
       majorSet.forEach(m => majorSelect.add(new Option(m, m)));
       updateMinorOptions();
     }
-    
+
     function updateMinorOptions() {
       const major = document.getElementById("major").value;
       const minorSelect = document.getElementById("minor");
@@ -1257,7 +1266,7 @@
       minorSet.forEach(m => minorSelect.add(new Option(m, m)));
       updateSubOptions();
     }
-    
+
     function updateSubOptions() {
       const major = document.getElementById("major").value;
       const minor = document.getElementById("minor").value;
@@ -1266,7 +1275,7 @@
       const subSet = [...new Set(sentences.filter(s => s.category.major === major && s.category.minor === minor).map(s => s.category.sub))];
       subSet.forEach(s => subSelect.add(new Option(s, s)));
     }
-    
+
     populateDropdowns();
   </script>
 </body>
