@@ -64,6 +64,7 @@
     <button id="next-btn">次へ</button>
     <button id="prev-btn">前へ</button>
     <button id="random-btn">ランダム</button>
+    <button id="speak-btn">音読</button>
   </div>
 
   <div class="question-container">
@@ -1197,6 +1198,11 @@
       updateSelectors();
     });
 
+    document.getElementById("speak-btn").addEventListener("click", () => {
+      const utterance = new SpeechSynthesisUtterance(sentences[currentSentenceIndex].text);
+      utterance.lang = 'ja-JP'; // 日本語の発音を設定
+      speechSynthesis.speak(utterance);
+    });
 
     // 大区分、中区分、小区分の初期化
     function initializeSelectors() {
