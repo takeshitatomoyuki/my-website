@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Design House Renovations</title>
+</head>
+
+<body>
+
+  <header>
+
+    <picture>
+      <source srcset="images/logo_pc.png" media="(min-width: 768px)">
+      <img class="logo" src="images/logo_sp.png" alt="logo">
+    </picture>
+
+
+    <nav class="gMenu">
+      <!-- メニュー開閉用 -->
+      <input type="checkbox" id="menu-btn" class="menu-btn">
+      <!-- アイコン作成用 -->
+      <label class="menu-icon" for="menu-btn">
+        <!-- 線作成用 -->
+        <span class="navicon"></span>
+      </label>
+      <!-- メニュー -->
+      <ul class="menu">
+        <li><a href="#concept">コンセプト</a></li>
+        <li><a href="#service">サービス</a></li>
+        <li><a href="#flow">施工の流れ</a></li>
+        <li><a href="#qa">よくあるご質問</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="image_container">
+      <picture>
+        <source srcset="images/main_top_pc.jpg" media="(min-width: 768px)">
+        <img src="images/main_top_sp.jpg" alt="">
+      </picture>
+    </div>
+    <section id="concept">
+      <h1>CONCEPT</h1>
+      <p class="subtitle">コンセプト</p>
+      <p class="family">家族が笑顔になれる場所</p>
+      <p class="lead">家族が集う、温かく居心地の良い空間づくりを目指して、幅広い年代の方に安心して過ごしていただける空間づくりや、お手入れのしやすい素材を使用したリフォームをご提案いたします。</p>
+    </section>
+    <section id="service">
+      <h1>SERVICE</h1>
+      <p class="subtitle">サービス</p>
+      <div class="service_box">
+        <div class="bathtub">
+          <img class="sample" src="images/bathtub.png" alt="浴室">
+          <h2>浴室</h2>
+          <p class="sentence">ご家族が一緒に入れる広めの浴槽や手すり等、安全性に配慮しています。</p>
+          <p class="more">
+            <a href="#" class="link">
+              <span class="text">more</span>
+              <span class="arrow_service"></span>
+            </a>
+          </p>
+        </div>
+
+        <div class="living">
+          <img class="sample" src="images/living.png" alt="リビング">
+          <h2>リビング</h2>
+          <p class="sentence">照明や家具の配置等、くつろぎやすい空間づくりを大切にしています。</p>
+          <p class="more">
+            <a href="#" class="link">
+              <span class="text">more</span>
+              <span class="arrow_service"></span>
+            </a>
+          </p>
+        </div>
+        <div class="kitchen">
+          <img class="sample" src="images/kitchen.png" alt="キッチン">
+          <h2>キッチン</h2>
+          <p class="sentence">機能性だけでなく、デザイン性にもこだわっております。</p>
+          <p class="more">
+            <a href="#" class="link">
+              <span class="text">more</span>
+              <span class="arrow_service"></span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="flow">
+      <h1>FLOW</h1>
+      <p class="subtitle flow_sub">施工の流れ</p>
+      <ul class="flow_list">
+        <li class="heading">ご相談</li>
+        <li class="arrow arrow_1">
+          <div class="div_arrow"></div>
+        </li>
+        <li class="heading">現地調査</li>
+        <li class="arrow arrow_2">
+          <div class="div_arrow"></div>
+        </li>
+        <li class="heading">お見積り</li>
+        <li class="arrow arrow_3">
+          <div class="div_arrow"></div>
+        </li>
+        <li class="heading">ご契約</li>
+        <li class="arrow arrow_4">
+          <div class="div_arrow"></div>
+        </li>
+        <li class="heading">施工</li>
+        <li class="arrow arrow_5">
+          <div class="div_arrow"></div>
+        </li>
+        <li class="heading heading_5">お引渡し</li>
+      </ul>
+
+    </section>
+    <section id="qa">
+      <h1>Q&A</h1>
+      <p class="subtitle">よくあるご質問</p>
+      <div class="qa_box">
+        <p class="question">見積りは無料ですか？</p>
+        <p class="answer">はい。お見積りは無料で承っております。ホームページよりお気軽にお問い合わせください。</p>
+        <p class="question">普段通り生活しながらのリフォーム工事は可能ですか？</p>
+        <p class="answer">はい。もちろん可能です。工事中の箇所は、何日間か使用できなくなる場合もございますのであらかじめご了承ください。大型リフォームの場合には、仮住まいもお薦めしております。</p>
+      </div>
+    </section>
+    <section id="contact">
+      <h1 class="contact_title">CONTACT</h1>
+      <p class="subtitle">お問い合わせ</p>
+      <div class="contact_box">
+        <div data-kind-pc>
+          <p class="kind">お問い合わせ種別</p>
+          <div class="kind_radio">
+            <label><input type="radio" name="attend" value="資料請求">資料請求</label>
+            <label><input type="radio" name="attend" value="ご相談">ご相談</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="name name_1">お名前</div>
+          <input type="text" name="user_name">
+        </div>
+        <div class="form-row">
+          <div class="name name_2">フリガナ</div>
+          <input type="text" name="user_kananame">
+        </div>
+        <div class="form-row">
+          <div class="name name_3">電話番号</div>
+          <input type="text" name="telephone_number">
+        </div>
+        <div class="form-row address-row">
+          <div class="name name_4">住所</div>
+          <div class="postal-code-wrapper">
+            <span class="postal-symbol">〒</span>
+            <input type="text" id="postal_code" name="postal_code" maxlength="8" pattern="\d{3}-\d{4}"
+              autocomplete="postal-code" placeholder="123-4567">
+          </div>
+        </div>
+        <div class="form-row living_address">
+          <input type="text" name="living_address" placeholder="住所を入力してください">
+
+        </div>
+        <div class="form-row">
+          <div class="name name_5">メールアドレス</div>
+          <input type="text" name="mail_address">
+        </div>
+        <div class="form-row">
+          <div class="name name_6">メールアドレス（確認用）</div>
+          <input type="text" name="mail_address_retry">
+        </div>
+        <div class="form-row">
+          <div class="contact_content">お問い合わせ内容</div>
+          <textarea name="question_content" rows="4"></textarea>
+        </div>
+        <form action="#" method="POST">
+          <!-- フォームの内容 -->
+          <div class="submitbtn">
+            <button type="submit" class="btn">
+              入力内容を確認する
+              <span class="arrow_submit"></span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer_arrow">
+      <div class="arrow_container">
+        <a href="#" class="arrow_top"></a>
+      </div>
+    </div>
+    <div class="copy">
+      &copy;Design House Renovations
+    </div>
+  </footer>
+
+
+
+</body>
+
+</html>
