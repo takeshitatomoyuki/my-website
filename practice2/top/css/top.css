@@ -1,0 +1,592 @@
+/* 全体の基本スタイル */
+body {
+  background-color: #f4f4f4;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-weight: 400;
+}
+
+.loading-container {
+  position: fixed;
+}
+
+h2 {
+  background: url(/top/image/sp_top_main_midashi.png) no-repeat bottom center/cover;
+
+  width: 60vw;
+  height: 10vw;
+  margin: 60px 77.5px 40px 77.5px;
+  font-size: 6.4vw;
+  font-weight: 400;
+  text-align: center;
+}
+
+
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 5.3vw;
+}
+
+h4 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-size: 3.2vw;
+  font-weight: 700;
+
+}
+
+
+.subtitle {
+  font-size: 4.3vw;
+  margin-left: 16px;
+}
+
+p {
+  margin: 0 16vw;
+  text-align: center;
+}
+
+.text-with-lines {
+  font-size: 3.2vw;
+  border-top: 2px solid black;
+  /* 上部に黒線を引く */
+  border-bottom: 2px solid black;
+  /* 下部に黒線を引く */
+  padding: 10px;
+  /* テキスト周りに余白を追加 */
+  text-align: left;
+  margin-left: 17vw;
+  margin-right: 17vw;
+  line-height: 1.6;
+}
+
+.header_container {
+  position: relative;
+  display: inline-block;
+}
+
+
+.header_bg {
+  width: 95vw;
+  height: calc(100vw * 1.8);
+}
+
+.header_logo {
+  position: absolute;
+  top: 50px;
+  /* 画像Aの上部からの距離 */
+  left: 50px;
+  /* 画像Aの左側からの距離 */
+  width: 80vw;
+  /* 画像Bのサイズ */
+
+}
+
+.bg2 {
+
+  background: url(/top/image/sp_top_main_bg1.png) no-repeat center center;
+  background-size: cover;
+  width: 95vw;
+  height: calc(100vw * 1.0);
+  text-align: center;
+  justify-content: center;
+}
+
+.bg2_sub1 {
+  margin-top: 60px;
+}
+
+.bg2_p {
+  font-size: 5.3vw;
+  font-weight: 400;
+  line-height: 2.0;
+  margin-top: 40px;
+}
+
+.p_sub {
+  font-size: 3.2vw;
+  padding-bottom: 12px;
+  border-bottom: 2px solid black;
+}
+
+
+.bg2_sub2 {
+  margin-top: 20px;
+  width: 85vw;
+  height: auto;
+
+}
+
+.bg3 {
+  padding-top: 80px;
+  background: url(/top/image/sp_top_main_bg2.png) no-repeat center center;
+  background-size: cover;
+  width: 95vw;
+  height: calc(95vw * 1.0);
+  text-align: center;
+
+}
+
+.bg3_p {
+  font-weight: 400;
+  font-size: 3.2vw;
+  line-height: 1.6;
+  margin: 0 16vw 5.3vw;
+}
+
+
+.bg3_sub {
+  width: 85vw;
+  height: auto;
+
+}
+
+.image-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+
+
+/* 画像はスマホ版では非表示 */
+.image-container img {
+  max-width: 100%;
+  margin: auto;
+  height: auto;
+  display: none;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+
+}
+
+button {
+  display: inline-block;
+  margin: 30px;
+  padding: 15px;
+  border: none;
+  border-radius: 50%;
+  background-color: #dfdfdf;
+  font-size: 4.3vw;
+  cursor: pointer;
+}
+
+button.active {
+  background-color: #999;
+}
+
+
+
+#image1 {
+  display: block;
+}
+
+.active {
+  background-color: #333;
+  /* 選択中のボタンの色を指定 */
+}
+
+.map-container {
+
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  /* 地図画像の最大幅 */
+  margin: 20px auto;
+}
+
+.map-container img {
+  width: 90vw;
+  height: auto;
+}
+
+.map-container .logo {
+  position: absolute;
+  width: 20%;
+  /* ロゴ画像の幅を指定 */
+  height: auto;
+}
+
+.logo1 {
+  top: 2%;
+  left: 80%;
+}
+
+.logo2 {
+  top: 26%;
+  left: 0%;
+}
+
+.logo3 {
+  top: 65%;
+  left: 31%;
+}
+
+.date {
+  font-size: 3.2vw;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.party {
+  line-height: 1.6;
+  margin-top: 40px;
+}
+
+
+
+
+.en {
+  width: 90vw;
+
+}
+
+/* 各 dt と dd を横並びにする */
+.info-item {
+  display: flex;
+  align-items: center;
+}
+
+dl {
+  margin-left: 5%;
+}
+
+
+dt {
+
+  /* ラベル部分の固定幅 */
+  font-weight: bold;
+  color: #333;
+
+}
+
+dt::before {
+  content: "■";
+  font-size: 3.2vw;
+  /* 四角マークのサイズを指定 */
+  margin-left: 10px;
+}
+
+dt::after {
+  content: ":";
+  /* コロンに変更 */
+  margin-left: 10px;
+}
+
+dd {
+  /* デフォルトの余白をリセット */
+  color: #555;
+}
+
+.info-item1_1 {
+  margin-left: 5%;
+}
+
+/* 台湾の祝祭日のリストを整列 */
+.holiday-list {
+
+  padding: 0;
+  margin: 0;
+}
+
+.holiday-list li {
+  display: grid;
+  /* FlexからGridへ変更 */
+  grid-template-columns: 150px 1fr;
+  justify-content: space-between;
+  /* 祝祭日名と日付を左右に分ける */
+  padding: 4px 0;
+  margin-left: 5%;
+}
+
+.holiday-list li span:first-child {
+  font-weight: bold;
+  /* 祝祭日名を太字に */
+}
+
+.top_arrow {
+
+  margin-left: 90%;
+}
+
+.arrow_image {
+  width: 48px;
+}
+
+
+/* PC版のスタイル */
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    text-align: center;
+
+    font-size: 5.3vw;
+  }
+
+  .header_bg {
+    width: 100vw;
+    height: calc(100vw * 0.56);
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .image-container img {
+    width: 30%;
+  }
+
+  .bg2 {
+
+    background: url(/top/image/pc_top_main_bg1.png) no-repeat center center;
+    background-size: cover;
+    width: 100vw;
+    height: calc(100vw * 0.53);
+    text-align: center;
+    justify-content: center;
+  }
+
+
+  .bg2_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .bg3 {
+    padding-top: 80px;
+    background: url(/top/image/pc_top_main_bg2.png) no-repeat center center;
+    background-size: cover;
+    width: 100vw;
+    height: calc(100vw * 0.53);
+    text-align: center;
+    justify-content: center;
+  }
+
+  .bg3_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .event_wrapper {
+    display: flex;
+    flex-direction: column;
+    /* 子要素を縦並びにする */
+    gap: 20px;
+    /* 2つのイベントの間に余白を作る */
+  }
+
+  .event_container1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .event_group1_1 {
+    flex-basis: 50%;
+  }
+
+  .event_container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+
+
+  travel_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .travel_left {
+    width: 45%;
+    /* 左側のグループの幅 */
+    display: flex;
+
+  }
+
+  .travel_right {
+    margin-left: 50vw;
+    width: 45%;
+    /* 右側のグループの幅 */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .map-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    /* 地図画像の最大幅 */
+    margin: 0 auto;
+  }
+
+  .map-container img {
+    width: 80%;
+    height: auto;
+  }
+
+  .map-container .logo {
+    position: absolute;
+    width: 20%;
+    /* ロゴ画像の幅を指定 */
+    height: auto;
+  }
+
+  .logo1 {
+    top: 2%;
+    left: 80%;
+  }
+
+  .logo2 {
+    top: 26%;
+    left: 0%;
+  }
+
+  .logo3 {
+    top: 65%;
+    left: 31%;
+  }
+
+  .en {
+    width: 50vw;
+  }
+
+
+  .bg2_sub2 {
+    margin-top: 100px;
+    width: 70vw;
+    height: auto;
+
+  }
+
+
+  .bg3_sub {
+    margin-top: 140px;
+    width: 70vw;
+    height: auto;
+
+  }
+
+  .text-with-lines {
+    font-size: 20px;
+    border-top: 2px solid black;
+    /* 上部に黒線を引く */
+    border-bottom: 2px solid black;
+    /* 下部に黒線を引く */
+    padding: 10px;
+    /* テキスト周りに余白を追加 */
+    text-align: left;
+    line-height: 1.6;
+    margin: 0 8%;
+  }
+
+  p {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 48px;
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  dt::before {
+    content: "■";
+    font-size: 3.2vw;
+    /* 四角マークのサイズを指定 */
+    margin-left: 10px;
+  }
+
+  .bg2_sub2 {
+    margin-top: 20px;
+    width: 60vw;
+    height: auto;
+
+  }
+
+  .bg3_sub {
+    width: 60vw;
+    height: auto;
+
+  }
+
+  h2 {
+    background: url(/top/image/sp_top_main_midashi.png) no-repeat bottom center/cover;
+
+    width: 60vw;
+    height: 10vw;
+    margin: 60px 77.5px 40px 77.5px;
+    font-size: 6.4vw;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .date {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  dl {
+    border: solid #333;
+    padding: 20px;
+  }
+
+  dt {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  dd {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  dt::before {
+    content: "■";
+    font-size: 20px;
+    /* 四角マークのサイズを指定 */
+    margin-left: 10px;
+  }
+
+
+  .event_container1 {
+    margin-left: 20px;
+  }
+
+  .event_container2 {
+    margin-left: 20px;
+  }
+
+
+
+
+}

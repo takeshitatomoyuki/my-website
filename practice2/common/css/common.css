@@ -1,0 +1,336 @@
+/* パンくずナビゲーション */
+.taiwan {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.taiwan {
+  color: #000000;
+}
+
+.taiwan li:not(:last-child)::after {
+  content: ">";
+  margin: 0 5px;
+}
+
+/* ここまでパンくずナビゲーション */
+
+
+
+/* フッター */
+footer {
+  width: 100%;
+  /* font-family: "Noto Sans JP", serif; */
+
+  background-color: #007AB7;
+  color: #fff;
+  list-style: none;
+  /* text-align: center; */
+}
+
+.footer_sp {
+  width: 53.6vw;
+  margin: 0 auto;
+
+}
+
+.footer_flag {
+  display: block;
+  margin: 0 auto;
+}
+
+.ft_box {
+  width: 201px;
+  margin: 0 auto;
+}
+
+
+.ft_list {
+  border-bottom: 1px solid;
+}
+
+.ft_text {
+  color: #fff;
+  font-size: 12px;
+  font-family: Zen Kaku Gothic New;
+
+  /* padding-top: ; */
+}
+
+
+/* p119見る */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.list {
+  list-style: none;
+  text-decoration: underline;
+  color: #fff;
+}
+
+.list_name p {
+  color: #fff;
+}
+
+.MenuList {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+/* メニューアイコンを画面右上に固定しています */
+.MenuList .menu-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+  top: 12px;
+  padding-top: 5px;
+  height: 12px;
+
+}
+
+/* メニューアイコン（三本線）の真ん中の線です */
+.MenuList .menu-icon .navicon {
+  background: #fdfbfb;
+  /* 色は自由に変更可能です */
+  display: block;
+  height: 3px;
+  /* 太さ */
+  width: 30px;
+  /* 長さ */
+  left: 7px;
+  top: 15px;
+  position: relative;
+  transition: background .10s ease-out;
+  /* 形が変わる時のアニメーション */
+
+
+}
+
+/* メニューアイコン（三本線）の上と下の線を疑似要素で追加 */
+.MenuList .menu-icon .navicon::before,
+.MenuList .menu-icon .navicon::after {
+  background: #38373d;
+  /* 色は自由に変更可能です */
+  content: '';
+  display: flex;
+  height: 100%;
+  position: absolute;
+  transition: all .4s ease-out;
+  /* 形が変わる時のアニメーション */
+  width: 70%;
+  margin-left: 5px;
+}
+
+.MenuList .menu-icon .navicon::before {
+  top: 10px;
+}
+
+/* 位置を上にずらしています */
+.MenuList .menu-icon .navicon::after {
+  top: -10px;
+}
+
+/* 位置を下にずらしています */
+/* 表示されるメニューです */
+.MenuList .list {
+  background-color: #000000;
+  overflow: hidden;
+  height: 100vh;
+  max-height: 0;
+  /* ★最初は高さを0にして非表示状態に */
+  transition: max-height .6s;
+  /* 表示されるときのアニメーション */
+  text-align: center;
+
+}
+
+/* メニュー部分のデザインです */
+.MenuList .list li:first-of-type {
+  padding-top: 40px;
+}
+
+.MenuList .list li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-left: 0;
+  color: #fff;
+}
+
+/* .MenuList .list li a:hover { */
+/* background-color: #140d0d; */
+/* } */
+/* チェックボックスは常に非表示です */
+.MenuList .menu-btn {
+  display: none;
+}
+
+/* ▼▼▼以下はチェックボックスがONの時の状態です▼▼▼ */
+.MenuList .menu-btn:checked~.list {
+  max-height: 100%;
+  /* ★チェックボックスがオンの時高さを338pxにして表示させます */
+  transition: max-height 10s;
+}
+
+/* メニューボタンの中央の線を非表示に */
+.MenuList .menu-btn:checked~.menu-icon .navicon {
+  background: transparent;
+}
+
+/* メニューボタンの上下の線を45度傾けて✕印を作ります */
+.MenuList .menu-btn:checked~.menu-icon .navicon::before {
+  transform: rotate(-45deg);
+  top: 0;
+  width: 100%;
+  right: 0px;
+}
+
+.MenuList .menu-btn:checked~.menu-icon .navicon::after {
+  transform: rotate(45deg);
+  top: 0;
+  width: 100%;
+  right: 0px;
+}
+
+/* サイトに合わせてオリジナルカスタマイズ */
+.MenuList .menu-icon {
+  top: 18px;
+  right: 10px;
+  width: 45px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.MenuList .menu-icon .navicon,
+.MenuList .menu-icon .navicon::before,
+.MenuList .menu-icon .navicon::after {
+
+  background: #110135;
+}
+
+
+/* ローディング のhtml*/
+/* <div class="loading-container">
+    <div class="loading-logo"></div>
+  </div> */
+
+
+.loading-logo {
+  position: fixed;
+  /* 画面全体に固定表示 */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url(/common/image/pc_tn_ft_logo.png);
+  background-position: center;
+  background-color: blue;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: fadeInOut 2s forwards;
+  pointer-events: none;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+
+/* モーダルのhtml */
+/* <button id="myBtn">モーダルを開く</button>
+
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>ここにモーダルの内容を記述します。</p>
+    </div>
+  </div> */
+/* モーダルのスタイル */
+.modal {
+  display: none;
+  /* デフォルトは非表示 */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  /* 背景色を透明に設定 */
+  background-color: transparent;
+
+}
+
+/* モーダルコンテンツのスタイル */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid transparent;
+  width: 80%;
+}
+
+/* 閉じるボタンのスタイル */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.resized-image {
+  height: auto;
+  /* アスペクト比を維持 */
+}
+
+footer {
+  padding-top: 20px;
+  line-height: 1.5;
+}
+
+ft_list {
+  margin-bottom: 10px;
+}
