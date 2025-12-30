@@ -100,6 +100,21 @@
   </div>
 
   <script>
+function adjustSelectWidth(select) {
+    const temp = document.createElement("span");
+    temp.style.visibility = "hidden";
+    temp.style.whiteSpace = "nowrap";
+    temp.style.font = getComputedStyle(select).font;
+    temp.textContent = select.options[select.selectedIndex].text;
+
+    document.body.appendChild(temp);
+    select.style.width = temp.offsetWidth + 30 + "px"; // 余白分
+    document.body.removeChild(temp);
+  }
+
+  const select = document.getElementById("major-select");
+  adjustSelectWidth(select);
+  select.addEventListener("change", () => adjustSelectWidth(select));    
     // 条文データ構造
     const sentences = [
      
